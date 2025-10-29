@@ -33,7 +33,7 @@ h1 {
     text-align: center;
 }
 /* Déclarations CSS qui remplace le mot "Pantone" par son logo dans le titre */
-h1 {
+h1 span {
     height: 43px;
     width: 250px;
     background: url(../img/logo-pantone.png) no-repeat;
@@ -80,7 +80,7 @@ Styles pantone of the year
 /* Déclarations CSS qui permet d'organiser tous les éléments HTML 
    contenant les informations sur le Pantone de l'année sous forme de grille */
 
-selecteur {
+.pantone-of-the-year-list {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
@@ -90,7 +90,7 @@ selecteur {
 /* Déclarations CSS qui doivent appliquer une mise en forme 
    à tous les titres des blocs Pantone de l'année */
 
-h3 {
+.pantone-of-the-year-item > h3 {
     height: 2.5em;
     background: #000;
     color: #fff;
@@ -105,7 +105,7 @@ h3 {
 /* Déclarations CSS qui doivent appliquer une mise en forme 
    à toutes les références des blocs Pantone de l'année */
 
-h3 {
+.pantone-of-the-year-item .ref {
     font-size: 0.75em;
     font-weight: bold;
     text-align: center;
@@ -115,34 +115,34 @@ h3 {
    à toutes les descriptions des blocs Pantone de l'année
    (indice : utiliser un combinateur +) */
 
-selecteur {
+.pantone-of-the-year-item .ref + p {
     font-size: 0.75em;
     line-height: 1.25em;
     text-align: justify;
 }
 /* Déclaration CSS qui donne sa couleur de fond 
    au titre du bloc pantone de l'année 2020 */
-selecteur {
+.year-2020 h3 {
     background: #0f4c81;
 }
 /* Déclaration CSS qui donne sa couleur de fond 
    au titre du bloc pantone de l'année 2019 */
-selecteur {
+.year-2019 h3 {
     background: #ff6f61;
 }
 /* Déclaration CSS qui donne sa couleur de fond 
    au titre du bloc pantone de l'année 2018 */
-selecteur {
+.year-2018 h3 {
     background:#604c8d;
 }
 /* Déclaration CSS qui donne sa couleur de fond 
    au titre du bloc pantone de l'année 2017 */
-selecteur {
+.year-2017 h3 {
     background: #88b04b;
 }
 /* Déclaration CSS qui donne sa couleur de fond 
    au titre du bloc pantone de l'année 2016 */
-selecteur {
+.year-2016 h3:hover {
     background: rgb(147,169,209);
     background: linear-gradient(90deg, rgba(147,169,209,1) 0%, rgba(147,169,209,1) 50%, rgba(247,202,202,1) 50%, rgba(247,202,202,1) 100%);
 }
