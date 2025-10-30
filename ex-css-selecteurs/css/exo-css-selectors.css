@@ -9,7 +9,7 @@ Layout de la page
 -------------------------------------------------------------- */
 
 /* Déclarations CSS qui seront hérités par l'ensemble des éléments html enfant */
-body {
+html {
     background-color: #fff;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5em;
@@ -20,7 +20,7 @@ Header
 -------------------------------------------------------------- */
 
 /* Déclarations CSS qui s'appliquent à l'en-tête du site */
-header {
+header#site-header {
     position: sticky;
     top: 0;
     background: rgba(255,255,255,0.9);
@@ -48,7 +48,8 @@ Contenu histoire et principe du Pantone
 -------------------------------------------------------------- */
 
 /* Déclarations CSS qui s'applique au conteneur des blocs histoire et principe */
-.history {
+/*On peut mettre aussi : main>div:nth-child(1) main>div:nth-child(2)*/
+main>div:not(main>div:last-child) {
     width: 60vw;
     margin: auto;
 }
@@ -90,7 +91,7 @@ Styles pantone of the year
 /* Déclarations CSS qui doivent appliquer une mise en forme 
    à tous les titres des blocs Pantone de l'année */
 
-.pantone-of-the-year-item > h3 {
+.pantone-of-the-year-item>h3 {
     height: 2.5em;
     background: #000;
     color: #fff;
@@ -138,14 +139,29 @@ Styles pantone of the year
 /* Déclaration CSS qui donne sa couleur de fond 
    au titre du bloc pantone de l'année 2017 */
 .year-2017 h3 {
-    background: #88b04b;
+    background: #88b04b
 }
 /* Déclaration CSS qui donne sa couleur de fond 
    au titre du bloc pantone de l'année 2016 */
-.year-2016 h3:hover {
+.year-2016 h3 {
     background: rgb(147,169,209);
-    background: linear-gradient(90deg, rgba(147,169,209,1) 0%, rgba(147,169,209,1) 50%, rgba(247,202,202,1) 50%, rgba(247,202,202,1) 100%);
+    background: linear-gradient(90deg, rgba(147,169,209,1) 0%, rgba(147,169,209,1) 50%, rgba(247,202,202,1) 50%, rgba(247,202,202,1) 100%); 
 }
 
 /* BONUS : faire en sorte que la couleur des titres des blocs 
 Pantone de l'année deviennent de la couleur associée au survol des blocs */
+.year-2020:hover h3 {
+    color: #0f4c81;
+}
+.year-2019:hover h3 {
+    color: #ff6f61;
+}
+.year-2018:hover h3 {
+    color: #604c8d;
+}
+.year-2017 h3:hover {
+    color: #88b04b;
+}
+.year-2016 h3:hover {
+    color:rgba(247,202,202,1)
+}
